@@ -14,6 +14,23 @@
     --dark6: #2f2f46;
     --cyan1: #70e3ea;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark2);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--dark3);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark4);
+}
+
 body{
     background-color: var(--dark1);
     height: 100vh;
@@ -114,7 +131,7 @@ strong{
     color: var(--white);
 }
 .box-img-main{
-    max-width: 450px;
+    max-width: 300px;
     padding: 1rem;   
 }
 .img-profile{
@@ -122,7 +139,7 @@ strong{
     width: 100%;
 }
 
-.second-section{
+:is(.second-section, .fourth-section){
     background-color: var(--dark2);
     display: flex;
     flex-direction: column;
@@ -152,5 +169,58 @@ strong{
     color: var(--dark5);
 }
 .third-section{
-    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.third-section > div{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.third-section > div img{
+    width: 350px;
+    border-radius: 5%;
+}
+.third-section > div p{
+    max-width: 800px;
+    color: var(--white);
+    text-align: justify;
+}
+footer{
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+footer > div{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+#my-projects-list{
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#my-projects-list a{
+    text-decoration: none;
+    color: var(--dark3)
+
+}
+#my-projects-list a:hover{
+    color: var(--dark5);
+    transition: .4s;
+    cursor: pointer;
+}
+:is(.img-profile, .img-who-i-am){
+    box-shadow: 1px 1px 1px 1px var(--cyan1);
 }
